@@ -1,3 +1,6 @@
+I followed steps from below article
+https://medium.com/visly/rust-on-ios-39f799b3c1dd
+
 ## 1. Create cargo library
 ```
 cargo new hworld --lib
@@ -50,3 +53,7 @@ copy files
 cp hworld/hworld.h ios/include
 cp hworld/target/universal/release/libhworld.a ios/libs
 ```
+
+
+## How to run locally
+Simply build and the ios project since binaries are already copied
