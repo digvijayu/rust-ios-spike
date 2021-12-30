@@ -36,3 +36,17 @@ cargo lipo --release
 ```
 
 If all goes well you should have a `librust.a` file located in `target/universal/release/`.
+
+
+## 7. Create and copy binaries to ios project
+Create binary folders 
+```
+mkdir libs
+mkdir include
+```
+
+copy files
+```
+cp hworld/hworld.h ios/include
+cp hworld/target/universal/release/libhworld.a ios/libs
+```

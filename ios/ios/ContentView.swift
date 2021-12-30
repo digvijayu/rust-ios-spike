@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var text: String = "Hii"
+    init() {
+        let result = rust_hello("worldie Jaldi")
+        let swift_result = String(cString: result!)
+        self.text = swift_result
+        rust_hello_free(UnsafeMutablePointer(mutating: result))
+        print(swift_result)
+    }
+    
+    
     var body: some View {
-        Text("Hello, world!")
+        Text("yoy")
             .padding()
     }
 }
