@@ -21,3 +21,18 @@ cargo install cbindgen
 ```
 cbindgen src/lib.rs -l c > hworld.h
 ```
+
+## 6. add lib details
+```
+[lib]
+name = "rust"
+crate-type = ["staticlib", "cdylib"]
+```
+
+and build 
+
+```
+cargo lipo --release
+```
+
+If all goes well you should have a `librust.a` file located in `target/universal/release/`.
